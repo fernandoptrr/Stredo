@@ -9,13 +9,6 @@ import Foundation
 import HealthKit
 
 class StretchingManager: NSObject, ObservableObject {
-    var selectedWorkout: HKWorkoutActivityType? {
-        didSet {
-            guard let selectedWorkout = selectedWorkout else { return }
-            startWorkout(workoutType: selectedWorkout)
-        }
-    }
-
     @Published var showingSummaryView: Bool = false {
         didSet {
             if showingSummaryView == false {
@@ -70,8 +63,7 @@ class StretchingManager: NSObject, ObservableObject {
         let typesToRead: Set = [
             HKQuantityType.quantityType(forIdentifier: .heartRate)!,
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
-            HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!,
-            HKQuantityType.quantityType(forIdentifier: .distanceCycling)!,
+            HKQuantityType.quantityType(forIdentifier: .appleStandTime)!,
             HKObjectType.activitySummaryType()
         ]
 
@@ -111,7 +103,7 @@ class StretchingManager: NSObject, ObservableObject {
     @Published var averageHeartRate: Double = 0
     @Published var heartRate: Double = 0
     @Published var activeEnergy: Double = 0
-    @Published var distance: Double = 0
+    @Published var standTime: Double = 0
     @Published var workout: HKWorkout?
 
     func updateForStatistics(_ statistics: HKStatistics?) {
@@ -126,9 +118,9 @@ class StretchingManager: NSObject, ObservableObject {
             case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
                 let energyUnit = HKUnit.kilocalorie()
                 self.activeEnergy = statistics.sumQuantity()?.doubleValue(for: energyUnit) ?? 0
-            case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning), HKQuantityType.quantityType(forIdentifier: .distanceCycling):
-                let meterUnit = HKUnit.meter()
-                self.distance = statistics.sumQuantity()?.doubleValue(for: meterUnit) ?? 0
+            case HKQuantityType.quantityType(forIdentifier: .appleStandTime):
+                let secondUnit = HKUnit.second()
+                self.standTime = statistics.mostRecentQuantity()?.doubleValue(for: secondUnit) ?? 0
             default:
                 return
             }
@@ -136,14 +128,13 @@ class StretchingManager: NSObject, ObservableObject {
     }
 
     func resetWorkout() {
-        selectedWorkout = nil
         builder = nil
         workout = nil
         session = nil
         activeEnergy = 0
         averageHeartRate = 0
         heartRate = 0
-        distance = 0
+        standTime = 0
     }
 }
 
@@ -188,6 +179,21 @@ extension StretchingManager: HKLiveWorkoutBuilderDelegate {
 
             // Update the published values.
             updateForStatistics(statistics)
+        }
+    }
+}
+
+extension HKWorkoutActivityType: Identifiable {
+    public var id: UInt {
+        rawValue
+    }
+
+    var name: String {
+        switch self {
+        case .other:
+            return "Stretching"
+        default:
+            return ""
         }
     }
 }

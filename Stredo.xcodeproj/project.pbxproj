@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C44AFFCF2A1B5B290096C433 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AFFCE2A1B5B290096C433 /* TimerView.swift */; };
 		C4AD1D3E2A1B069100DE3A08 /* Stredo Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C4AD1D3D2A1B069100DE3A08 /* Stredo Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C4AD1D432A1B069100DE3A08 /* StredoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D422A1B069100DE3A08 /* StredoApp.swift */; };
-		C4AD1D452A1B069100DE3A08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D442A1B069100DE3A08 /* ContentView.swift */; };
+		C4AD1D452A1B069100DE3A08 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D442A1B069100DE3A08 /* StartView.swift */; };
 		C4AD1D472A1B069300DE3A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AD1D462A1B069300DE3A08 /* Assets.xcassets */; };
 		C4AD1D4A2A1B069300DE3A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AD1D492A1B069300DE3A08 /* Preview Assets.xcassets */; };
 		C4AD1D552A1B06B500DE3A08 /* StretchingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D542A1B06B500DE3A08 /* StretchingManager.swift */; };
+		C4AD1D5A2A1B1C2B00DE3A08 /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D592A1B1C2B00DE3A08 /* SessionPagingView.swift */; };
+		C4AD1D5C2A1B1CEE00DE3A08 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D5B2A1B1CEE00DE3A08 /* ControlsView.swift */; };
+		C4AD1D5E2A1B1DB400DE3A08 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D5D2A1B1DB400DE3A08 /* MetricsView.swift */; };
+		C4AD1D602A1B1E8300DE3A08 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D5F2A1B1E8300DE3A08 /* ElapsedTimeView.swift */; };
+		C4AD1D622A1B1FA000DE3A08 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */; };
+		C4AD1D642A1B203D00DE3A08 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +47,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C44AFFCE2A1B5B290096C433 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C4AD1D372A1B069100DE3A08 /* Stredo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stredo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AD1D3D2A1B069100DE3A08 /* Stredo Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stredo Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AD1D422A1B069100DE3A08 /* StredoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StredoApp.swift; sourceTree = "<group>"; };
-		C4AD1D442A1B069100DE3A08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C4AD1D442A1B069100DE3A08 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		C4AD1D462A1B069300DE3A08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4AD1D492A1B069300DE3A08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4AD1D542A1B06B500DE3A08 /* StretchingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingManager.swift; sourceTree = "<group>"; };
 		C4AD1D572A1B06EB00DE3A08 /* Stredo Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stredo Watch App.entitlements"; sourceTree = "<group>"; };
 		C4AD1D582A1B06F400DE3A08 /* Stredo-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Stredo-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C4AD1D592A1B1C2B00DE3A08 /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		C4AD1D5B2A1B1CEE00DE3A08 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		C4AD1D5D2A1B1DB400DE3A08 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		C4AD1D5F2A1B1E8300DE3A08 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +99,14 @@
 				C4AD1D582A1B06F400DE3A08 /* Stredo-Watch-App-Info.plist */,
 				C4AD1D572A1B06EB00DE3A08 /* Stredo Watch App.entitlements */,
 				C4AD1D422A1B069100DE3A08 /* StredoApp.swift */,
-				C4AD1D442A1B069100DE3A08 /* ContentView.swift */,
+				C44AFFCE2A1B5B290096C433 /* TimerView.swift */,
+				C4AD1D442A1B069100DE3A08 /* StartView.swift */,
+				C4AD1D5F2A1B1E8300DE3A08 /* ElapsedTimeView.swift */,
+				C4AD1D5D2A1B1DB400DE3A08 /* MetricsView.swift */,
+				C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */,
+				C4AD1D5B2A1B1CEE00DE3A08 /* ControlsView.swift */,
+				C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */,
+				C4AD1D592A1B1C2B00DE3A08 /* SessionPagingView.swift */,
 				C4AD1D562A1B06CB00DE3A08 /* Controllers */,
 				C4AD1D462A1B069300DE3A08 /* Assets.xcassets */,
 				C4AD1D482A1B069300DE3A08 /* Preview Content */,
@@ -207,9 +228,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4AD1D452A1B069100DE3A08 /* ContentView.swift in Sources */,
+				C44AFFCF2A1B5B290096C433 /* TimerView.swift in Sources */,
+				C4AD1D452A1B069100DE3A08 /* StartView.swift in Sources */,
+				C4AD1D602A1B1E8300DE3A08 /* ElapsedTimeView.swift in Sources */,
 				C4AD1D552A1B06B500DE3A08 /* StretchingManager.swift in Sources */,
+				C4AD1D642A1B203D00DE3A08 /* ActivityRingsView.swift in Sources */,
 				C4AD1D432A1B069100DE3A08 /* StredoApp.swift in Sources */,
+				C4AD1D5C2A1B1CEE00DE3A08 /* ControlsView.swift in Sources */,
+				C4AD1D622A1B1FA000DE3A08 /* SummaryView.swift in Sources */,
+				C4AD1D5E2A1B1DB400DE3A08 /* MetricsView.swift in Sources */,
+				C4AD1D5A2A1B1C2B00DE3A08 /* SessionPagingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

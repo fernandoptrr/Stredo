@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct Stredo_Watch_AppApp: App {
-    var body: some Scene {
+    @StateObject private var  stretchingManager = StretchingManager()
+    @State private var path = NavigationPath()
+
+    @SceneBuilder var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack(path: $path) {
+                StartView(path: $path)
+            }
+            .environmentObject(stretchingManager)
         }
     }
 }
