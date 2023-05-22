@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4AD1D3E2A1B069100DE3A08 /* Stredo Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C4AD1D3D2A1B069100DE3A08 /* Stredo Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C4AD1D432A1B069100DE3A08 /* StredoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D422A1B069100DE3A08 /* StredoApp.swift */; };
+		C4AD1D452A1B069100DE3A08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D442A1B069100DE3A08 /* ContentView.swift */; };
+		C4AD1D472A1B069300DE3A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AD1D462A1B069300DE3A08 /* Assets.xcassets */; };
+		C4AD1D4A2A1B069300DE3A08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AD1D492A1B069300DE3A08 /* Preview Assets.xcassets */; };
+		C4AD1D552A1B06B500DE3A08 /* StretchingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D542A1B06B500DE3A08 /* StretchingManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4AD1D3F2A1B069100DE3A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AD1D312A1B069100DE3A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4AD1D3C2A1B069100DE3A08;
+			remoteInfo = "Stredo Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C4AD1D502A1B069300DE3A08 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C4AD1D3E2A1B069100DE3A08 /* Stredo Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C4AD1D372A1B069100DE3A08 /* Stredo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stredo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AD1D3D2A1B069100DE3A08 /* Stredo Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stredo Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AD1D422A1B069100DE3A08 /* StredoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StredoApp.swift; sourceTree = "<group>"; };
+		C4AD1D442A1B069100DE3A08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C4AD1D462A1B069300DE3A08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4AD1D492A1B069300DE3A08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C4AD1D542A1B06B500DE3A08 /* StretchingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingManager.swift; sourceTree = "<group>"; };
+		C4AD1D572A1B06EB00DE3A08 /* Stredo Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stredo Watch App.entitlements"; sourceTree = "<group>"; };
+		C4AD1D582A1B06F400DE3A08 /* Stredo-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Stredo-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4AD1D3A2A1B069100DE3A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4AD1D302A1B069100DE3A08 = {
+			isa = PBXGroup;
+			children = (
+				C4AD1D412A1B069100DE3A08 /* Stredo Watch App */,
+				C4AD1D382A1B069100DE3A08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4AD1D382A1B069100DE3A08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4AD1D372A1B069100DE3A08 /* Stredo.app */,
+				C4AD1D3D2A1B069100DE3A08 /* Stredo Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4AD1D412A1B069100DE3A08 /* Stredo Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				C4AD1D582A1B06F400DE3A08 /* Stredo-Watch-App-Info.plist */,
+				C4AD1D572A1B06EB00DE3A08 /* Stredo Watch App.entitlements */,
+				C4AD1D422A1B069100DE3A08 /* StredoApp.swift */,
+				C4AD1D442A1B069100DE3A08 /* ContentView.swift */,
+				C4AD1D562A1B06CB00DE3A08 /* Controllers */,
+				C4AD1D462A1B069300DE3A08 /* Assets.xcassets */,
+				C4AD1D482A1B069300DE3A08 /* Preview Content */,
+			);
+			path = "Stredo Watch App";
+			sourceTree = "<group>";
+		};
+		C4AD1D482A1B069300DE3A08 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C4AD1D492A1B069300DE3A08 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4AD1D562A1B06CB00DE3A08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4AD1D542A1B06B500DE3A08 /* StretchingManager.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4AD1D362A1B069100DE3A08 /* Stredo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4AD1D512A1B069300DE3A08 /* Build configuration list for PBXNativeTarget "Stredo" */;
+			buildPhases = (
+				C4AD1D352A1B069100DE3A08 /* Resources */,
+				C4AD1D502A1B069300DE3A08 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4AD1D402A1B069100DE3A08 /* PBXTargetDependency */,
+			);
+			name = Stredo;
+			productName = Stredo;
+			productReference = C4AD1D372A1B069100DE3A08 /* Stredo.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		C4AD1D3C2A1B069100DE3A08 /* Stredo Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4AD1D4D2A1B069300DE3A08 /* Build configuration list for PBXNativeTarget "Stredo Watch App" */;
+			buildPhases = (
+				C4AD1D392A1B069100DE3A08 /* Sources */,
+				C4AD1D3A2A1B069100DE3A08 /* Frameworks */,
+				C4AD1D3B2A1B069100DE3A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stredo Watch App";
+			productName = "Stredo Watch App";
+			productReference = C4AD1D3D2A1B069100DE3A08 /* Stredo Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4AD1D312A1B069100DE3A08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C4AD1D362A1B069100DE3A08 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					C4AD1D3C2A1B069100DE3A08 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = C4AD1D342A1B069100DE3A08 /* Build configuration list for PBXProject "Stredo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4AD1D302A1B069100DE3A08;
+			productRefGroup = C4AD1D382A1B069100DE3A08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4AD1D362A1B069100DE3A08 /* Stredo */,
+				C4AD1D3C2A1B069100DE3A08 /* Stredo Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4AD1D352A1B069100DE3A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AD1D3B2A1B069100DE3A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AD1D4A2A1B069300DE3A08 /* Preview Assets.xcassets in Resources */,
+				C4AD1D472A1B069300DE3A08 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4AD1D392A1B069100DE3A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AD1D452A1B069100DE3A08 /* ContentView.swift in Sources */,
+				C4AD1D552A1B06B500DE3A08 /* StretchingManager.swift in Sources */,
+				C4AD1D432A1B069100DE3A08 /* StredoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4AD1D402A1B069100DE3A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4AD1D3C2A1B069100DE3A08 /* Stredo Watch App */;
+			targetProxy = C4AD1D3F2A1B069100DE3A08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C4AD1D4B2A1B069300DE3A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C4AD1D4C2A1B069300DE3A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C4AD1D4E2A1B069300DE3A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Stredo Watch App/Stredo Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stredo Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stredo-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Stredo;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in Stredo.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Exersice tracked by Stredo on Apple Watch will be saved to Apple Health.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.Stredo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		C4AD1D4F2A1B069300DE3A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Stredo Watch App/Stredo Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stredo Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stredo-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Stredo;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in Stredo.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Exersice tracked by Stredo on Apple Watch will be saved to Apple Health.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.Stredo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		C4AD1D522A1B069300DE3A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				INFOPLIST_KEY_CFBundleDisplayName = Stredo;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.Stredo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C4AD1D532A1B069300DE3A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				INFOPLIST_KEY_CFBundleDisplayName = Stredo;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.Stredo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4AD1D342A1B069100DE3A08 /* Build configuration list for PBXProject "Stredo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AD1D4B2A1B069300DE3A08 /* Debug */,
+				C4AD1D4C2A1B069300DE3A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4AD1D4D2A1B069300DE3A08 /* Build configuration list for PBXNativeTarget "Stredo Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AD1D4E2A1B069300DE3A08 /* Debug */,
+				C4AD1D4F2A1B069300DE3A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4AD1D512A1B069300DE3A08 /* Build configuration list for PBXNativeTarget "Stredo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AD1D522A1B069300DE3A08 /* Debug */,
+				C4AD1D532A1B069300DE3A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4AD1D312A1B069100DE3A08 /* Project object */;
+}
