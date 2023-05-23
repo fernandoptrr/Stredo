@@ -11,40 +11,32 @@ import HealthKit
 
 struct SessionPagingView: View {
     @EnvironmentObject var stretchingManager: StretchingManager
-    @Environment(\.isLuminanceReduced) var isLuminanceReduced
-    @State private var selection: Tab = .metrics
+    @State private var selection: Tab = .stretch
     @Binding var path: NavigationPath
-    private let workoutType: HKWorkoutActivityType = .cycling
     enum Tab {
-        case controls, metrics, nowPlaying
+        case controls, stretch
     }
+    @Environment(\.isLuminanceReduced) var isLuminanceReduced
 
     var body: some View {
         TabView(selection: $selection) {
+            ExerciseView(path: $path)
+                .tag(Tab.stretch)
             ControlsView(path: $path).tag(Tab.controls)
-            ExerciseView()
-                .tag(Tab.metrics)
-            NowPlayingView().tag(Tab.nowPlaying)
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(selection == .metrics || selection == .nowPlaying)
-        
-        .onChange(of: stretchingManager.running) { _ in
-            displayMetricsView()
-        }
+        .navigationBarHidden(true)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
-        
-        .onChange(of: isLuminanceReduced) { _ in
-            displayMetricsView()
+        .onChange(of: stretchingManager.running) { _ in
+            displayStretchView()
         }
-        .onAppear{
-            stretchingManager.startWorkout(workoutType: workoutType)
+        .onChange(of: isLuminanceReduced) { _ in
+            displayStretchView()
         }
     }
 
-    private func displayMetricsView() {
+     func displayStretchView() {
         withAnimation {
-            selection = .metrics
+            selection = .stretch
         }
     }
 }

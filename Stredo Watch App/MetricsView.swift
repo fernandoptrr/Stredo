@@ -10,16 +10,19 @@ import HealthKit
 
 struct MetricsView: View {
     @EnvironmentObject var stretchingManager: StretchingManager
-
+    
     var formattedStandTime: String {
         let minutes = Int(stretchingManager.standTime) / 60
         let seconds = Int(stretchingManager.standTime) % 60
         return String(format: "%02d:%02d", minutes, seconds)
     }
-
+    
     var body: some View {
-        TimelineView(MetricsTimelineSchedule(from: stretchingManager.builder?.startDate ?? Date(),
-                                             isPaused: stretchingManager.session?.state == .paused)) { context in
+        TimelineView(
+            MetricsTimelineSchedule(
+                from: stretchingManager.builder?.startDate ?? Date(),
+                isPaused: stretchingManager.session?.state == .paused))
+        { context in
             VStack(alignment: .leading) {
                 ElapsedTimeView(elapsedTime: stretchingManager.builder?.elapsedTime(at: context.date) ?? 0, showSubseconds: context.cadence == .live)
                     .foregroundStyle(.yellow)
@@ -45,17 +48,17 @@ struct MetricsView_Previews: PreviewProvider {
 private struct MetricsTimelineSchedule: TimelineSchedule {
     var startDate: Date
     var isPaused: Bool
-
+    
     init(from startDate: Date, isPaused: Bool) {
         self.startDate = startDate
         self.isPaused = isPaused
     }
-
+    
     func entries(from startDate: Date, mode: TimelineScheduleMode) -> AnyIterator<Date> {
         var baseSchedule = PeriodicTimelineSchedule(from: self.startDate,
                                                     by: (mode == .lowFrequency ? 1.0 : 1.0 / 30.0))
             .entries(from: startDate, mode: mode)
-
+        
         return AnyIterator<Date> {
             guard !isPaused else { return nil }
             return baseSchedule.next()

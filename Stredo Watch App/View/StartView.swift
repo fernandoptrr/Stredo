@@ -23,24 +23,17 @@ struct StartView: View {
                 .multilineTextAlignment(.center)
                 .padding()
             Spacer()
-            HStack(spacing: 32) {
-                Button(action: {}){
-                    Image(systemName: "play.fill")
-                        .foregroundColor(.pink)
-                }
-                .frame(width: 50)
-                .tint(.pink)
-                Button(action: {
-                    path.append("sessionView")
-                }){
-                    Image(systemName: "figure.cooldown")
-                }
-                .frame(width: 50)
-                .tint(.yellow)
-                .navigationDestination(for: String.self) { view in
-                    if view == "sessionView" {
-                        SessionPagingView(path: $path)
-                    }
+            Button(action: {
+                path.append("sessionView")
+                stretchingManager.startWorkout(workoutType: workoutType)
+            }){
+                Image(systemName: "figure.cooldown")
+            }
+            .padding(.horizontal)
+            .tint(.yellow)
+            .navigationDestination(for: String.self) { view in
+                if view == "sessionView" {
+                    SessionPagingView(path: $path)
                 }
             }
         }

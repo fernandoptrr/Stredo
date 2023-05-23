@@ -21,6 +21,7 @@
 		C4AD1D602A1B1E8300DE3A08 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D5F2A1B1E8300DE3A08 /* ElapsedTimeView.swift */; };
 		C4AD1D622A1B1FA000DE3A08 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */; };
 		C4AD1D642A1B203D00DE3A08 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */; };
+		C4E2ECB32A1CA50E00C76D3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E2ECB22A1CA50E00C76D3A /* ContentView.swift */; };
 		C4EC4CB02A1BD2BA00F8D689 /* BreakIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */; };
 		C4EC4CB22A1BEDA800F8D689 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */; };
 		C4EC4CB42A1BF2D100F8D689 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC4CB32A1BF2D100F8D689 /* ExerciseView.swift */; };
@@ -68,6 +69,7 @@
 		C4AD1D5F2A1B1E8300DE3A08 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
 		C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
+		C4E2ECB22A1CA50E00C76D3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakIntervalView.swift; sourceTree = "<group>"; };
 		C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		C4EC4CB32A1BF2D100F8D689 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
@@ -115,18 +117,10 @@
 				C4AD1D582A1B06F400DE3A08 /* Stredo-Watch-App-Info.plist */,
 				C4AD1D572A1B06EB00DE3A08 /* Stredo Watch App.entitlements */,
 				C4AD1D422A1B069100DE3A08 /* StredoApp.swift */,
-				C44AFFCE2A1B5B290096C433 /* TimerProggresView.swift */,
-				C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */,
-				C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */,
-				C4AD1D442A1B069100DE3A08 /* StartView.swift */,
 				C4AD1D5F2A1B1E8300DE3A08 /* ElapsedTimeView.swift */,
-				C4EC4CB32A1BF2D100F8D689 /* ExerciseView.swift */,
 				C4AD1D5D2A1B1DB400DE3A08 /* MetricsView.swift */,
-				C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */,
-				C4AD1D5B2A1B1CEE00DE3A08 /* ControlsView.swift */,
-				C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */,
-				C4AD1D592A1B1C2B00DE3A08 /* SessionPagingView.swift */,
 				C44AFFD62A1BCE620096C433 /* Model */,
+				C4E2ECAF2A1C825800C76D3A /* View */,
 				C4AD1D562A1B06CB00DE3A08 /* Controller */,
 				C4AD1D462A1B069300DE3A08 /* Assets.xcassets */,
 				C4AD1D482A1B069300DE3A08 /* Preview Content */,
@@ -148,6 +142,39 @@
 				C4AD1D542A1B06B500DE3A08 /* StretchingManager.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4E2ECAF2A1C825800C76D3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */,
+				C4E2ECB22A1CA50E00C76D3A /* ContentView.swift */,
+				C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */,
+				C4AD1D5B2A1B1CEE00DE3A08 /* ControlsView.swift */,
+				C4AD1D592A1B1C2B00DE3A08 /* SessionPagingView.swift */,
+				C4AD1D442A1B069100DE3A08 /* StartView.swift */,
+				C4E2ECB02A1C827500C76D3A /* Timer */,
+				C4E2ECB12A1C82A200C76D3A /* Exercise */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4E2ECB02A1C827500C76D3A /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				C44AFFCE2A1B5B290096C433 /* TimerProggresView.swift */,
+				C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		C4E2ECB12A1C82A200C76D3A /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				C4EC4CB32A1BF2D100F8D689 /* ExerciseView.swift */,
+				C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */,
+			);
+			path = Exercise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +222,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					C4AD1D362A1B069100DE3A08 = {
 						CreatedOnToolsVersion = 14.2;
@@ -259,6 +286,7 @@
 				C4AD1D5C2A1B1CEE00DE3A08 /* ControlsView.swift in Sources */,
 				C4AD1D622A1B1FA000DE3A08 /* SummaryView.swift in Sources */,
 				C4EC4CB22A1BEDA800F8D689 /* CountdownView.swift in Sources */,
+				C4E2ECB32A1CA50E00C76D3A /* ContentView.swift in Sources */,
 				C4AD1D5E2A1B1DB400DE3A08 /* MetricsView.swift in Sources */,
 				C4EC4CB42A1BF2D100F8D689 /* ExerciseView.swift in Sources */,
 				C4AD1D5A2A1B1C2B00DE3A08 /* SessionPagingView.swift in Sources */,
@@ -309,6 +337,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -367,6 +396,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

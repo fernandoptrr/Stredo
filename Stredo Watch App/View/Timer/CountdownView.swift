@@ -14,12 +14,14 @@ struct CountdownView: View {
     var body: some View {
         Text(formattedTime(timeRemaining))
             .onChange(of: date) { _ in
-                timeRemaining -= 1
+                if timeRemaining > -1 {
+                    timeRemaining -= 1
+                }
             }
     }
 
     private func formattedTime(_ time: Double) -> String {
-        let seconds = Int(time) % 60 + 1
+        let seconds = Int(max(time, 0)) % 60
         return String(format: "%01d", seconds)
     }
 }

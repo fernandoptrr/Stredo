@@ -11,11 +11,9 @@ import WatchKit
 struct BreakIntervalView: View {
     private let duration: TimeInterval = 5
     @State private var timeRemaining: TimeInterval
-    @Binding var timerDone: Bool
     @Environment(\.dismiss) var dismiss
 
-    init(timerDone: Binding<Bool>) {
-        self._timerDone = timerDone
+    init() {
         self._timeRemaining = State(initialValue: duration)
     }
 
@@ -23,7 +21,7 @@ struct BreakIntervalView: View {
         TimelineView(
             .animation(
                 minimumInterval: 1.0,
-                paused: timeRemaining <= 0)) { context in
+                paused: timeRemaining < 0)) { context in
                     ZStack {
                         VStack {
                             Spacer()
@@ -51,8 +49,7 @@ struct BreakIntervalView: View {
                     }
                 }
                 .onChange(of: timeRemaining) { _ in
-                    if timeRemaining < 1 {
-                        timerDone = true
+                    if timeRemaining < 0 {
                         dismiss()
                     }
                     else {
@@ -65,7 +62,7 @@ struct BreakIntervalView: View {
 
 struct BreakIntervalView_Previews: PreviewProvider {
     static var previews: some View {
-        BreakIntervalView(timerDone: .constant(false))
+        BreakIntervalView()
     }
 }
 
