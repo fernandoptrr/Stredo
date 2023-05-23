@@ -38,13 +38,13 @@ struct SessionPagingView: View {
         ZStack {
             if showBreak {
                 BreakIntervalView(showBreak: $showBreak, message: exercises[index + 1].name)
-                    .transition(.scale)
+                    .transition(.slide)
             } else {
                 ExerciseView(index: $index, timeRemaining: $timeRemaining)
                 .transition(.slide)
             }
         }
-        .animation(.spring(), value: showBreak)
+        .animation(.easeInOut, value: showBreak)
         .navigationBarHidden(true)
         .onChange(of: timeRemaining) { _ in
             if timeRemaining < 0 {

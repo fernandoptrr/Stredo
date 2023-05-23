@@ -17,7 +17,7 @@ struct TimerProggresView: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 35, style: .continuous)
             .trim(from: 0, to: CGFloat(1 - (timeRemaining / duration)))
-            .stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+            .stroke(style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
             .foregroundColor(color)
             .rotationEffect(.degrees(180))
             .animation(.easeInOut(duration: 1), value: timeRemaining)

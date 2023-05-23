@@ -37,24 +37,39 @@ struct ExerciseView: View {
                     .font(.caption)
                     .padding(.bottom)
                     Spacer()
-                    VStack {
-                        Image(systemName: "figure.strengthtraining.functional")
-                            .font(.system(size: 54, design: .rounded))
-                        Text(stretchingManager.heartRate.formatted(.number.precision(.fractionLength(0))) + "💗")
-                            .font(.system(size: 12))
-                            .padding(.top, 4)
-                    }
-                    .padding()
+//                    ZStack {
+//                        ZStack {
+//                            Image("stretch_bg")
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                                .frame(height: 108)
+//                            Image("flexor_1")
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                                .frame(height: 74)
+//                                .offset(y: 12)
+//                                .overlay(alignment: .top){
+//                                    Text(stretchingManager.heartRate.formatted(.number.precision(.fractionLength(0))) + "💗")
+//                                        .font(.system(size: 12))
+//                                        .offset(y: -12)
+//                                }
+//                        }
+//                        .foregroundColor(.black)
+//
+//                    }
+                    ExerciseImageView(images: exercise.images)
                     Spacer()
-                    Text(exercise.desc)
+                    Text(exercise.name)
                         .font(.system(size: 14))
                         .lineSpacing(2)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal)
+                        .padding()
                 }
-                TimerProggresView(timeRemaining: $timeRemaining, duration: exercise.duration, color: .yellow)
+                TimerProggresView(timeRemaining: $timeRemaining, duration: exercise.duration, color: Color("OrangeColor"))
             }
         }
+        .foregroundColor(.black)
+        .background(Color("BgColor"))
     }
 }
 

@@ -27,41 +27,42 @@ struct BreakIntervalView: View {
                 minimumInterval: 1.0,
                 paused: stretchingManager.session?.state == .paused)
         ) { context in
-                    ZStack {
-                        VStack {
-                            Spacer()
-                            HStack {
-                                CountdownView(
-                                    date: context.date,
-                                timeRemaining: $timeRemaining)
-                                .font(.system(size: 48, design: .rounded))
-                                .padding(.horizontal)
-                                Text("s")
-                                    .font(.title2)
-                                    .offset(x: -4, y: 6)
-                            }
-                            Text("Next")
-                                .font(.footnote)
-                                .padding(.top)
-                            Text(message)
-                                .font(.caption)
-                                .lineSpacing(2)
-                                .multilineTextAlignment(.center)
-                                .padding(.vertical, 4)
-                                .padding(.horizontal)
-                        }
-                        TimerProggresView(timeRemaining: $timeRemaining, duration: duration, color: .blue)
+            ZStack {
+                VStack {
+                    Spacer()
+                    HStack {
+                        CountdownView(
+                            date: context.date,
+                            timeRemaining: $timeRemaining)
+                        .font(.system(size: 48, design: .rounded))
+                        .padding(.horizontal)
+                        Text("s")
+                            .font(.title2)
+                            .offset(x: -4, y: 6)
                     }
+                    Text("Next")
+                        .font(.footnote)
+                        .padding(.top)
+                    Text(message)
+                        .font(.caption)
+                        .lineSpacing(2)
+                        .multilineTextAlignment(.center)
+                        .padding(.vertical, 4)
+                        .padding(.horizontal)
                 }
-                .onChange(of: timeRemaining) { _ in
-                    if timeRemaining < 0 {
-                        showBreak.toggle()
-                    }
-                    else {
-                        WKInterfaceDevice.current().play(.click)
-                    }
-                }
-                .navigationBarHidden(true)
+                TimerProggresView(timeRemaining: $timeRemaining, duration: duration, color: Color("BlueColor"))
+            }
+        }
+        .background(Color.black)
+        .onChange(of: timeRemaining) { _ in
+            if timeRemaining < 0 {
+                showBreak.toggle()
+            }
+            else {
+                WKInterfaceDevice.current().play(.click)
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 

@@ -9,40 +9,69 @@ import Foundation
 
 struct Exercise {
     let name: String
-    let desc: String
     let duration: TimeInterval
+    let images: [String]
 
     enum ExerciseEnum: String {
-        case neckRot = "Neck Rotation"
-        case shoulderRot = "Shoulder Rotations"
-        case wristNForearm = "Wrist and Forearm"
-        case backwardsArch = "Backwards Arching"
-        case heelRaises = "Heel Raises"
-
-        var description: String {
-            switch self {
-            case .neckRot:
-                return "Rotate your neck gently"
-            case .shoulderRot:
-                return "Rotate your shoulders in a circular motion"
-            case .wristNForearm:
-                return "Stretch and exercise your wrists and forearms"
-            case .backwardsArch:
-                return "Arch your back backwards for a stretch"
-            case .heelRaises:
-                return "Raise your heels off the ground and lower them back down"
-            }
-        }
+        case neckRotR = "Right Neck Rotation"
+        case neckRotL = "Left Neck Rotation"
+        case neckStretchR = "Right Neck Stretch"
+        case neckStretchL = "Left Neck Stretch"
+        case ssbR = "Right Standing Side Bend"
+        case ssbL = "Left Standing Side Bend"
+        case flexor = "Shoulder Rotations"
+        case fb = "Forward Bend"
+        case co = "Chest Opener"
     }
 }
 
 extension Exercise {
     static let exercises = [
-        Exercise(name: ExerciseEnum.neckRot.rawValue, desc: ExerciseEnum.neckRot.description, duration: 5),
-        Exercise(name: ExerciseEnum.shoulderRot.rawValue, desc: ExerciseEnum.shoulderRot.description, duration: 5),
-//        Exercise(name: ExerciseEnum.wristNForearm.rawValue, desc: ExerciseEnum.wristNForearm.description, duration: 5),
-//        Exercise(name: ExerciseEnum.backwardsArch.rawValue, desc: ExerciseEnum.backwardsArch.description, duration: 5),
-//        Exercise(name: ExerciseEnum.heelRaises.rawValue, desc: ExerciseEnum.heelRaises.description, duration: 5)
+        Exercise(
+            name: ExerciseEnum.neckRotR.rawValue,
+            duration: 5,
+            images: ["neckRot_1", "neckRot_2"]
+        ),
+        Exercise(
+            name: ExerciseEnum.neckRotL.rawValue,
+            duration: 5,
+            images: ["neckRot_1", "neckRot_3"]
+        ),
+        Exercise(
+            name: ExerciseEnum.neckStretchR.rawValue,
+            duration: 5,
+            images: ["neckStretch_1", "neckStretch_2"]
+        ),
+        Exercise(
+            name: ExerciseEnum.neckStretchL.rawValue,
+            duration: 5,
+            images: ["neckStretch_3", "neckStretch_4"]
+        ),
+        Exercise(
+            name: ExerciseEnum.flexor.rawValue,
+            duration: 5,
+            images: ["flexor_1", "flexor_2"]
+        ),
+        Exercise(
+            name: ExerciseEnum.ssbR.rawValue,
+            duration: 5,
+            images: ["ssb_1"]
+        ),
+        Exercise(
+            name: ExerciseEnum.ssbL.rawValue,
+            duration: 5,
+            images: ["ssb_2"]
+        ),
+        Exercise(
+            name: ExerciseEnum.fb.rawValue,
+            duration: 5,
+            images: ["fb"]
+        ),
+        Exercise(
+            name: ExerciseEnum.co.rawValue,
+            duration: 5,
+            images: ["co"]
+        ),
     ]
 }
 

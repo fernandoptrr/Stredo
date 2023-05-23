@@ -19,6 +19,7 @@
 		C4AD1D5C2A1B1CEE00DE3A08 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D5B2A1B1CEE00DE3A08 /* ControlsView.swift */; };
 		C4AD1D622A1B1FA000DE3A08 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */; };
 		C4AD1D642A1B203D00DE3A08 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */; };
+		C4D747E82A1D535400862247 /* ExerciseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D747E72A1D535400862247 /* ExerciseImageView.swift */; };
 		C4E2ECB32A1CA50E00C76D3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E2ECB22A1CA50E00C76D3A /* ContentView.swift */; };
 		C4EC4CB02A1BD2BA00F8D689 /* BreakIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */; };
 		C4EC4CB22A1BEDA800F8D689 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */; };
@@ -65,6 +66,7 @@
 		C4AD1D5B2A1B1CEE00DE3A08 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
+		C4D747E72A1D535400862247 /* ExerciseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImageView.swift; sourceTree = "<group>"; };
 		C4E2ECB22A1CA50E00C76D3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakIntervalView.swift; sourceTree = "<group>"; };
 		C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		C4E2ECB12A1C82A200C76D3A /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
+				C4D747E72A1D535400862247 /* ExerciseImageView.swift */,
 				C4EC4CB32A1BF2D100F8D689 /* ExerciseView.swift */,
 				C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */,
 			);
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D747E82A1D535400862247 /* ExerciseImageView.swift in Sources */,
 				C44AFFCF2A1B5B290096C433 /* TimerProggresView.swift in Sources */,
 				C4AD1D452A1B069100DE3A08 /* StartView.swift in Sources */,
 				C4EC4CB02A1BD2BA00F8D689 /* BreakIntervalView.swift in Sources */,
