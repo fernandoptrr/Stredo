@@ -11,32 +11,75 @@ import HealthKit
 
 struct SessionPagingView: View {
     @EnvironmentObject var stretchingManager: StretchingManager
-    @State private var selection: Tab = .stretch
+    @State private var showBreak = false
+    @State private var isPaused = false
+    @State private var index: Int = 0
+    @State private var timeRemaining: Double = 100
     @Binding var path: NavigationPath
-    enum Tab {
-        case controls, stretch
+    let exercises: [Exercise] = Exercise.exercises
+    var exercise: Exercise {
+        Exercise.exercises[index]
     }
-    @Environment(\.isLuminanceReduced) var isLuminanceReduced
+    var lastExercise: Bool {
+        index + 1 == Exercise.exercises.count
+    }
+
+    init(path: Binding<NavigationPath>) {
+        self._path = path
+        self._timeRemaining = State(initialValue: exercise.duration)
+    }
+
+    private func nextExercise() {
+        index += 1
+        timeRemaining = exercise.duration
+    }
+    
+    var body: some View {
+        ZStack {
+            if showBreak {
+                BreakIntervalView(showBreak: $showBreak, message: exercises[index + 1].name)
+                    .transition(.scale)
+            } else {
+                ExerciseView(index: $index, timeRemaining: $timeRemaining)
+                .transition(.slide)
+            }
+        }
+        .animation(.spring(), value: showBreak)
+        .navigationBarHidden(true)
+        .onChange(of: timeRemaining) { _ in
+            if timeRemaining < 0 {
+                if lastExercise {
+                    stretchingManager.endWorkout()
+                    path.removeLast(path.count)
+                } else {
+                    if !lastExercise {
+                        showBreak.toggle()
+                        timeRemaining = 100
+                    }
+                }
+            }
+        }
+        .onChange(of: showBreak) { _ in
+            if !showBreak {
+                nextExercise()
+            }
+        }
+        .onTapGesture {
+            stretchingManager.togglePause()
+            isPaused.toggle()
+        }
+        .sheet(isPresented: $isPaused){
+            ControlsView(path: $path, isPaused: $isPaused)
+        }
+    }
+}
+
+struct SecondView: View {
+    @Binding var showBreak: Bool
 
     var body: some View {
-        TabView(selection: $selection) {
-            ExerciseView(path: $path)
-                .tag(Tab.stretch)
-            ControlsView(path: $path).tag(Tab.controls)
-        }
-        .navigationBarHidden(true)
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
-        .onChange(of: stretchingManager.running) { _ in
-            displayStretchView()
-        }
-        .onChange(of: isLuminanceReduced) { _ in
-            displayStretchView()
-        }
-    }
-
-     func displayStretchView() {
-        withAnimation {
-            selection = .stretch
+        Button("Hide Break") {
+            showBreak.toggle()
         }
     }
 }

@@ -50,6 +50,7 @@ class StretchingManager: NSObject, ObservableObject {
         builder?.beginCollection(withStart: startDate) { (success, error) in
             // The workout has started.
         }
+        print("workout started")
     }
 
     // Request authorization to access HealthKit.

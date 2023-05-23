@@ -20,6 +20,12 @@ struct SummaryView: View {
         return formatter
     }()
 
+    func formattedStandTime(standTime: Double) -> String {
+        let minutes = Int(standTime) / 60
+        let seconds = Int(standTime) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+
     var body: some View {
         if stretchingManager.workout == nil {
             ProgressView("Saving Exercise")
@@ -41,11 +47,11 @@ struct SummaryView: View {
                                                                 usage: .workout,
                                                                 numberFormatStyle: .number.precision(.fractionLength(0)))))
                     .foregroundStyle(.green)
-                    SummaryMetricView(title: "Stand Time", value: "11:02")
+                    SummaryMetricView(title: "Stand Time", value: formattedStandTime(standTime: stretchingManager.standTime))
                     .foregroundStyle(.pink)
                     Text("Activity Rings")
                     ActivityRingsView(healthStore: stretchingManager.healthStore)
-                        .frame(width: 50, height: 50)
+                        .frame(width: 60, height: 60)
                     Button("Done") {
                         dismiss()
                     }

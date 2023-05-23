@@ -10,11 +10,14 @@ import SwiftUI
 struct ControlsView: View {
     @EnvironmentObject var stretchingManager: StretchingManager
     @Binding var path: NavigationPath
+    @Binding var isPaused: Bool
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         HStack {
             VStack {
                 Button {
+                    dismiss()
                     stretchingManager.endWorkout()
                     path.removeLast(path.count)
                 } label: {
@@ -27,19 +30,21 @@ struct ControlsView: View {
             VStack {
                 Button {
                     stretchingManager.togglePause()
+                    isPaused.toggle()
                 } label: {
-                    Image(systemName: stretchingManager.running ? "pause" : "play")
+                    Image(systemName: "play")
                 }
                 .tint(.yellow)
                 .font(.title2)
-                Text(stretchingManager.running ? "Pause" : "Resume")
+                Text("Resume")
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
 struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
-        ControlsView(path: .constant(NavigationPath())).environmentObject(StretchingManager())
+        ControlsView(path: .constant(NavigationPath()), isPaused: .constant(true)).environmentObject(StretchingManager())
     }
 }

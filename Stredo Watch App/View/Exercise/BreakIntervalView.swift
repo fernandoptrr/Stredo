@@ -9,19 +9,24 @@ import SwiftUI
 import WatchKit
 
 struct BreakIntervalView: View {
-    private let duration: TimeInterval = 5
+    @EnvironmentObject var stretchingManager: StretchingManager
     @State private var timeRemaining: TimeInterval
-    @Environment(\.dismiss) var dismiss
+    @Binding var showBreak: Bool
+    let message: String
+    private let duration: TimeInterval = 5
 
-    init() {
+    init(showBreak: Binding<Bool>, message: String) {
         self._timeRemaining = State(initialValue: duration)
+        self._showBreak = showBreak
+        self.message = message
     }
 
     var body: some View {
         TimelineView(
             .animation(
                 minimumInterval: 1.0,
-                paused: timeRemaining < 0)) { context in
+                paused: stretchingManager.session?.state == .paused)
+        ) { context in
                     ZStack {
                         VStack {
                             Spacer()
@@ -38,7 +43,7 @@ struct BreakIntervalView: View {
                             Text("Next")
                                 .font(.footnote)
                                 .padding(.top)
-                            Text("Sitting left neck Stretch")
+                            Text(message)
                                 .font(.caption)
                                 .lineSpacing(2)
                                 .multilineTextAlignment(.center)
@@ -50,7 +55,7 @@ struct BreakIntervalView: View {
                 }
                 .onChange(of: timeRemaining) { _ in
                     if timeRemaining < 0 {
-                        dismiss()
+                        showBreak.toggle()
                     }
                     else {
                         WKInterfaceDevice.current().play(.click)
@@ -62,7 +67,8 @@ struct BreakIntervalView: View {
 
 struct BreakIntervalView_Previews: PreviewProvider {
     static var previews: some View {
-        BreakIntervalView()
+        BreakIntervalView(showBreak: .constant(true), message: "Sittingleft neck Stretch")
+            .environmentObject(StretchingManager())
     }
 }
 

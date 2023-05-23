@@ -40,9 +40,9 @@ extension Exercise {
     static let exercises = [
         Exercise(name: ExerciseEnum.neckRot.rawValue, desc: ExerciseEnum.neckRot.description, duration: 5),
         Exercise(name: ExerciseEnum.shoulderRot.rawValue, desc: ExerciseEnum.shoulderRot.description, duration: 5),
-        Exercise(name: ExerciseEnum.wristNForearm.rawValue, desc: ExerciseEnum.wristNForearm.description, duration: 5),
-        Exercise(name: ExerciseEnum.backwardsArch.rawValue, desc: ExerciseEnum.backwardsArch.description, duration: 5),
-        Exercise(name: ExerciseEnum.heelRaises.rawValue, desc: ExerciseEnum.heelRaises.description, duration: 5)
+//        Exercise(name: ExerciseEnum.wristNForearm.rawValue, desc: ExerciseEnum.wristNForearm.description, duration: 5),
+//        Exercise(name: ExerciseEnum.backwardsArch.rawValue, desc: ExerciseEnum.backwardsArch.description, duration: 5),
+//        Exercise(name: ExerciseEnum.heelRaises.rawValue, desc: ExerciseEnum.heelRaises.description, duration: 5)
     ]
 }
 
