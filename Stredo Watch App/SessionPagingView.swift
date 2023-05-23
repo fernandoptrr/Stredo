@@ -22,17 +22,18 @@ struct SessionPagingView: View {
     var body: some View {
         TabView(selection: $selection) {
             ControlsView(path: $path).tag(Tab.controls)
-            MetricsView().tag(Tab.metrics)
+            ExerciseView()
+                .tag(Tab.metrics)
             NowPlayingView().tag(Tab.nowPlaying)
         }
-        .navigationTitle( "Stretching")
         .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(selection == .nowPlaying)
+        .navigationBarHidden(selection == .metrics || selection == .nowPlaying)
         
         .onChange(of: stretchingManager.running) { _ in
             displayMetricsView()
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
+        
         .onChange(of: isLuminanceReduced) { _ in
             displayMetricsView()
         }
