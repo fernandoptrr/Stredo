@@ -29,6 +29,7 @@ struct SummaryView: View {
     var body: some View {
         if stretchingManager.workout == nil {
             ProgressView("Saving Exercise")
+                .font(FontProvider.custom(.nunito, size: .title2, style: .title2))
                 .navigationBarHidden(true)
         } else {
             ScrollView {
@@ -50,6 +51,7 @@ struct SummaryView: View {
                     SummaryMetricView(title: "Stand Time", value: formattedStandTime(standTime: stretchingManager.standTime))
                     .foregroundStyle(.pink)
                     Text("Activity Rings")
+                        .font(FontProvider.custom(.nunito, size: .title2, style: .title2))
                     ActivityRingsView(healthStore: stretchingManager.healthStore)
                         .frame(width: 60, height: 60)
                     Button("Done") {
@@ -79,7 +81,8 @@ struct SummaryMetricView: View {
         Text(title)
             .foregroundStyle(.foreground)
         Text(value)
-            .font(.system(.title2, design: .rounded).lowercaseSmallCaps())
+            .font(FontProvider.custom(.nunito, size: .title2, style: .title2)
+            .lowercaseSmallCaps())
         Divider()
     }
 }

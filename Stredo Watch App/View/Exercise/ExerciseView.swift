@@ -27,29 +27,17 @@ struct ExerciseView: View {
                 ExerciseImageView(images: exercise.images)
                     .offset(y: -4)
                 VStack {
-                    HStack(spacing: 16) {
-                        Text("\(index + 1) / \(exercises.count)")
-                            .font(FontProvider.custom(.nunito, size: .caption))
-                            .fontWeight(.medium)
-                        HStack {
-                            CountdownView(
-                                date: context.date,
-                                timeRemaining: $timeRemaining)
-                            Text("s")
-                        }
-                        .font(FontProvider.custom(.nunito, size: .caption))
-                        .fontWeight(.medium)
-                    }
-                    .font(.caption)
-//                    Text(stretchingManager.heartRate.formatted(.number.precision(.fractionLength(0))) + "💗")
+                    ExerciseMetricsView(timeRemaining: $timeRemaining, index: index, date: context.date)
+                        .padding(1)
                     Spacer()
                     Text(exercise.desc)
-                        .font(FontProvider.custom(.nunito, size: .caption2))
+                        .font(FontProvider.custom(.nunito, size: .subheadline, style: .subheadline))
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 16)
                         .offset(y: 10)
                 }
+                .foregroundColor(Color("DarkGreenColor"))
                 TimerProggresView(timeRemaining: $timeRemaining, duration: exercise.duration, color: Color("LightOrangeColor"))
             }
         }

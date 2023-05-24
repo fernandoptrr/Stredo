@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41EE42D2A1E4F6100EBF237 /* ExerciseMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41EE42C2A1E4F6100EBF237 /* ExerciseMetricsView.swift */; };
 		C44AFFCF2A1B5B290096C433 /* TimerProggresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AFFCE2A1B5B290096C433 /* TimerProggresView.swift */; };
 		C44AFFD52A1BCE560096C433 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AFFD42A1BCE560096C433 /* Exercise.swift */; };
 		C4AD1D3E2A1B069100DE3A08 /* Stredo Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C4AD1D3D2A1B069100DE3A08 /* Stredo Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C41EE42C2A1E4F6100EBF237 /* ExerciseMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMetricsView.swift; sourceTree = "<group>"; };
 		C44AFFCE2A1B5B290096C433 /* TimerProggresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProggresView.swift; sourceTree = "<group>"; };
 		C44AFFD42A1BCE560096C433 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		C4AD1D372A1B069100DE3A08 /* Stredo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stredo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 				C4D747E72A1D535400862247 /* ExerciseImageView.swift */,
 				C4EC4CB32A1BF2D100F8D689 /* ExerciseView.swift */,
 				C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */,
+				C41EE42C2A1E4F6100EBF237 /* ExerciseMetricsView.swift */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				C44AFFD52A1BCE560096C433 /* Exercise.swift in Sources */,
 				C4AD1D432A1B069100DE3A08 /* StredoApp.swift in Sources */,
 				C4AD1D5C2A1B1CEE00DE3A08 /* ControlsView.swift in Sources */,
+				C41EE42D2A1E4F6100EBF237 /* ExerciseMetricsView.swift in Sources */,
 				C4AD1D622A1B1FA000DE3A08 /* SummaryView.swift in Sources */,
 				C4EC4CB22A1BEDA800F8D689 /* CountdownView.swift in Sources */,
 				C4E2ECB32A1CA50E00C76D3A /* ContentView.swift in Sources */,

@@ -37,14 +37,14 @@ struct BreakIntervalView: View {
                         .font(FontProvider.custom(.nunito, size: 48))
                         .padding(.horizontal)
                         Text("s")
-                            .font(FontProvider.custom(.nunito, size: .title2))
+                            .font(FontProvider.custom(.nunito, size: .title2, style: .title2))
                             .offset(x: -4, y: 6)
                     }
                     Spacer()
                     Text("Next")
-                        .font(FontProvider.custom(.nunito, size: .caption))
+                        .font(FontProvider.custom(.nunito, size: .caption, style: .caption))
                     Text(message)
-                        .font(FontProvider.custom(.nunito, size: .footnote))
+                        .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
                         .fontWeight(.semibold)
                         .lineSpacing(2)
                         .multilineTextAlignment(.center)
@@ -60,8 +60,8 @@ struct BreakIntervalView: View {
             if timeRemaining < 0 {
                 showBreak.toggle()
             }
-            else {
-                WKInterfaceDevice.current().play(.click)
+            else if timeRemaining < 5{
+                WKInterfaceDevice.current().play(.notification)
             }
         }
         .navigationBarHidden(true)

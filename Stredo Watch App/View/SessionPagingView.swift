@@ -49,6 +49,7 @@ struct SessionPagingView: View {
         .navigationBarHidden(true)
         .onChange(of: timeRemaining) { _ in
             if timeRemaining < 0 {
+                WKInterfaceDevice.current().play(.notification)
                 if lastExercise {
                     stretchingManager.endWorkout()
                     path.removeLast(path.count)

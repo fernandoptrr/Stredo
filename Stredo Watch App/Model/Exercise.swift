@@ -20,7 +20,8 @@ struct Exercise {
         case neckStretchL = "Left Neck Stretch"
         case ssbR = "Right Standing Side Bend"
         case ssbL = "Left Standing Side Bend"
-        case flexor = "Forearm Bend"
+        case fabR = "Right Forearm Bend"
+        case fabL = "Left Forearm Bend"
         case fb = "Forward Bend"
         case co = "Chest Opener"
 
@@ -38,8 +39,10 @@ struct Exercise {
                 return "Bend to the right side while standing."
             case .ssbL:
                 return "Bend to the left side while standing."
-            case .flexor:
-                return "Bend wrist up and down to stretch the forearm."
+            case .fabR:
+                return "Bend your right wrist up and down to stretch the forearm."
+            case .fabL:
+                return "Bend your left wrist up and down to stretch the forearm."
             case .fb:
                 return "Bend forward at your waist with a straight back."
             case .co:
@@ -77,10 +80,16 @@ extension Exercise {
             desc: ExerciseEnum.neckStretchL.description
         ),
         Exercise(
-            name: ExerciseEnum.flexor.rawValue,
+            name: ExerciseEnum.fabR.rawValue,
             duration: 16,
             images: ["flexor_1", "flexor_2"],
-            desc: ExerciseEnum.flexor.description
+            desc: ExerciseEnum.fabR.description
+        ),
+        Exercise(
+            name: ExerciseEnum.fabL.rawValue,
+            duration: 16,
+            images: ["flexor_1", "flexor_2"],
+            desc: ExerciseEnum.fabL.description
         ),
         Exercise(
             name: ExerciseEnum.ssbR.rawValue,

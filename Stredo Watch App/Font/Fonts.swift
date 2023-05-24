@@ -25,12 +25,12 @@ struct FontProvider {
         case caption2 = 11
     }
 
-    static func custom(_ font: FontType, size: FontSize) -> Font {
-        return Font.custom(font.rawValue, size: size.rawValue)
+    static func custom(_ font: FontType, size: FontSize, style: Font.TextStyle = .body) -> Font {
+        return Font.custom(font.rawValue, size: size.rawValue, relativeTo: style)
     }
 
-    static func custom(_ font: FontType, size: CGFloat) -> Font {
-        return Font.custom(font.rawValue, size: size)
+    static func custom(_ font: FontType, size: CGFloat, style: Font.TextStyle = .body) -> Font {
+        return Font.custom(font.rawValue, size: size, relativeTo: style)
     }
 }
 

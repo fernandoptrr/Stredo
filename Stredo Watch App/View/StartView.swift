@@ -22,10 +22,10 @@ struct StartView: View {
                 .offset(y: 48)
             VStack {
                 Text("Stredo")
-                    .font(FontProvider.custom(.nunito, size: .callout))
+                    .font(FontProvider.custom(.nunito, size: .title3, style: .title3))
                     .fontWeight(.bold)
                 Text("Elevate your productivity and improve your overall well-being")
-                    .font(FontProvider.custom(.nunito, size: .caption2))
+                    .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
                     .multilineTextAlignment(.center)
                     .padding(.top, -1)
                     .padding(.horizontal)
@@ -36,9 +36,9 @@ struct StartView: View {
                 }){
                     Image(systemName: "figure.cooldown")
                 }
-                .padding(.horizontal, 16)
                 .foregroundColor(Color("DarkGreenColor"))
                 .tint(Color("MidGreenColor").opacity(10))
+                .padding(.horizontal, 16)
                 .navigationDestination(for: String.self) { view in
                     if view == "sessionView" {
                         SessionPagingView(path: $path)

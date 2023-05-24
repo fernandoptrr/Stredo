@@ -28,7 +28,7 @@ struct ControlsView: View {
                 .tint(Color("LightRedColor").opacity(10))
                 .font(.title3)
                 Text("End")
-                    .font(FontProvider.custom(.nunito, size: .footnote))
+                    .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
                     .fontWeight(.medium)
                     .padding(.top, 2)
             }
@@ -44,7 +44,7 @@ struct ControlsView: View {
                 .tint(Color("LightGreenColor").opacity(10))
                 .font(.title3)
                 Text("Resume")
-                    .font(FontProvider.custom(.nunito, size: .footnote))
+                    .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
                     .fontWeight(.medium)
                     .padding(.top, 2)
             }
