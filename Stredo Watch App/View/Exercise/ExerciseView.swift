@@ -24,46 +24,31 @@ struct ExerciseView: View {
             )
         ){ context in
             ZStack {
+                ExerciseImageView(images: exercise.images)
+                    .offset(y: -4)
                 VStack {
                     HStack(spacing: 16) {
                         Text("\(index + 1) / \(exercises.count)")
+                            .font(FontProvider.custom(.nunito, size: .caption))
+                            .fontWeight(.medium)
                         HStack {
                             CountdownView(
                                 date: context.date,
                                 timeRemaining: $timeRemaining)
                             Text("s")
                         }
+                        .font(FontProvider.custom(.nunito, size: .caption))
+                        .fontWeight(.medium)
                     }
                     .font(.caption)
-                    .padding(.bottom)
+//                    Text(stretchingManager.heartRate.formatted(.number.precision(.fractionLength(0))) + "💗")
                     Spacer()
-//                    ZStack {
-//                        ZStack {
-//                            Image("stretch_bg")
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fit)
-//                                .frame(height: 108)
-//                            Image("flexor_1")
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fit)
-//                                .frame(height: 74)
-//                                .offset(y: 12)
-//                                .overlay(alignment: .top){
-//                                    Text(stretchingManager.heartRate.formatted(.number.precision(.fractionLength(0))) + "💗")
-//                                        .font(.system(size: 12))
-//                                        .offset(y: -12)
-//                                }
-//                        }
-//                        .foregroundColor(.black)
-//
-//                    }
-                    ExerciseImageView(images: exercise.images)
-                    Spacer()
-                    Text(exercise.name)
-                        .font(.system(size: 14))
-                        .lineSpacing(2)
+                    Text(exercise.desc)
+                        .font(FontProvider.custom(.nunito, size: .caption2))
+                        .fontWeight(.medium)
                         .multilineTextAlignment(.center)
-                        .padding()
+                        .padding(.horizontal, 16)
+                        .offset(y: 10)
                 }
                 TimerProggresView(timeRemaining: $timeRemaining, duration: exercise.duration, color: Color("LightOrangeColor"))
             }

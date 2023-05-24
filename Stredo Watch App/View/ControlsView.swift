@@ -28,7 +28,8 @@ struct ControlsView: View {
                 .tint(Color("LightRedColor").opacity(10))
                 .font(.title3)
                 Text("End")
-                    .font(.footnote)
+                    .font(FontProvider.custom(.nunito, size: .footnote))
+                    .fontWeight(.medium)
                     .padding(.top, 2)
             }
             VStack {
@@ -43,7 +44,8 @@ struct ControlsView: View {
                 .tint(Color("LightGreenColor").opacity(10))
                 .font(.title3)
                 Text("Resume")
-                    .font(.footnote)
+                    .font(FontProvider.custom(.nunito, size: .footnote))
+                    .fontWeight(.medium)
                     .padding(.top, 2)
             }
         }

@@ -22,12 +22,13 @@ struct StartView: View {
                 .offset(y: 48)
             VStack {
                 Text("Stredo")
-                    .font(.title3)
-                    .bold()
+                    .font(FontProvider.custom(.nunito, size: .callout))
+                    .fontWeight(.bold)
                 Text("Elevate your productivity and improve your overall well-being")
-                    .font(.system(size: 12))
+                    .font(FontProvider.custom(.nunito, size: .caption2))
                     .multilineTextAlignment(.center)
-                    .padding(.top, -2)
+                    .padding(.top, -1)
+                    .padding(.horizontal)
                 Spacer()
                 Button(action: {
                     path.append("sessionView")

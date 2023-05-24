@@ -34,20 +34,21 @@ struct BreakIntervalView: View {
                         CountdownView(
                             date: context.date,
                             timeRemaining: $timeRemaining)
-                        .font(.system(size: 48, design: .rounded))
+                        .font(FontProvider.custom(.nunito, size: 48))
                         .padding(.horizontal)
                         Text("s")
-                            .font(.title2)
+                            .font(FontProvider.custom(.nunito, size: .title2))
                             .offset(x: -4, y: 6)
                     }
+                    Spacer()
                     Text("Next")
-                        .font(.footnote)
-                        .padding(.top)
+                        .font(FontProvider.custom(.nunito, size: .caption))
                     Text(message)
-                        .font(.caption)
+                        .font(FontProvider.custom(.nunito, size: .footnote))
+                        .fontWeight(.semibold)
                         .lineSpacing(2)
                         .multilineTextAlignment(.center)
-                        .padding(.vertical, 4)
+                        .padding(.top, 2)
                         .padding(.horizontal)
                 }
                 TimerProggresView(timeRemaining: $timeRemaining, duration: duration, color: Color("DarkGreenColor"))

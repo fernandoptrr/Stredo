@@ -20,6 +20,9 @@
 		C4AD1D622A1B1FA000DE3A08 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */; };
 		C4AD1D642A1B203D00DE3A08 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */; };
 		C4D747E82A1D535400862247 /* ExerciseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D747E72A1D535400862247 /* ExerciseImageView.swift */; };
+		C4DB1BC52A1DBEBE00AE88C5 /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DB1BC42A1DBEBE00AE88C5 /* Nunito.ttf */; };
+		C4DB1BC62A1DBEBE00AE88C5 /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DB1BC42A1DBEBE00AE88C5 /* Nunito.ttf */; };
+		C4DB1BC82A1DBF4F00AE88C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB1BC72A1DBF4F00AE88C5 /* Fonts.swift */; };
 		C4E2ECB32A1CA50E00C76D3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E2ECB22A1CA50E00C76D3A /* ContentView.swift */; };
 		C4EC4CB02A1BD2BA00F8D689 /* BreakIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */; };
 		C4EC4CB22A1BEDA800F8D689 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */; };
@@ -67,6 +70,8 @@
 		C4AD1D612A1B1FA000DE3A08 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C4AD1D632A1B203D00DE3A08 /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
 		C4D747E72A1D535400862247 /* ExerciseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImageView.swift; sourceTree = "<group>"; };
+		C4DB1BC42A1DBEBE00AE88C5 /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nunito.ttf; sourceTree = "<group>"; };
+		C4DB1BC72A1DBF4F00AE88C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		C4E2ECB22A1CA50E00C76D3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4EC4CAF2A1BD2BA00F8D689 /* BreakIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakIntervalView.swift; sourceTree = "<group>"; };
 		C4EC4CB12A1BEDA800F8D689 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 				C4AD1D582A1B06F400DE3A08 /* Stredo-Watch-App-Info.plist */,
 				C4AD1D572A1B06EB00DE3A08 /* Stredo Watch App.entitlements */,
 				C4AD1D422A1B069100DE3A08 /* StredoApp.swift */,
+				C4DB1BC92A1DBF5700AE88C5 /* Font */,
 				C44AFFD62A1BCE620096C433 /* Model */,
 				C4E2ECAF2A1C825800C76D3A /* View */,
 				C4AD1D562A1B06CB00DE3A08 /* Controller */,
@@ -138,6 +144,15 @@
 				C4AD1D542A1B06B500DE3A08 /* StretchingManager.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4DB1BC92A1DBF5700AE88C5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB1BC42A1DBEBE00AE88C5 /* Nunito.ttf */,
+				C4DB1BC72A1DBF4F00AE88C5 /* Fonts.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		C4E2ECAF2A1C825800C76D3A /* View */ = {
@@ -253,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DB1BC52A1DBEBE00AE88C5 /* Nunito.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DB1BC62A1DBEBE00AE88C5 /* Nunito.ttf in Resources */,
 				C4AD1D4A2A1B069300DE3A08 /* Preview Assets.xcassets in Resources */,
 				C4AD1D472A1B069300DE3A08 /* Assets.xcassets in Resources */,
 			);
@@ -273,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D747E82A1D535400862247 /* ExerciseImageView.swift in Sources */,
+				C4DB1BC82A1DBF4F00AE88C5 /* Fonts.swift in Sources */,
 				C44AFFCF2A1B5B290096C433 /* TimerProggresView.swift in Sources */,
 				C4AD1D452A1B069100DE3A08 /* StartView.swift in Sources */,
 				C4EC4CB02A1BD2BA00F8D689 /* BreakIntervalView.swift in Sources */,
@@ -428,6 +446,7 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in Stredo.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Exersice tracked by Stredo on Apple Watch will be saved to Apple Health.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +481,7 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in Stredo.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Exersice tracked by Stredo on Apple Watch will be saved to Apple Health.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
