@@ -50,10 +50,11 @@ struct BreakIntervalView: View {
                         .padding(.vertical, 4)
                         .padding(.horizontal)
                 }
-                TimerProggresView(timeRemaining: $timeRemaining, duration: duration, color: Color("BlueColor"))
+                TimerProggresView(timeRemaining: $timeRemaining, duration: duration, color: Color("DarkGreenColor"))
             }
         }
-        .background(Color.black)
+        .foregroundColor(.black)
+        .background(Color("LightGreenColor"))
         .onChange(of: timeRemaining) { _ in
             if timeRemaining < 0 {
                 showBreak.toggle()

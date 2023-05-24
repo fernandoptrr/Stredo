@@ -14,7 +14,7 @@ struct ControlsView: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
-        HStack {
+        HStack(spacing: 16) {
             VStack {
                 Button {
                     dismiss()
@@ -22,10 +22,14 @@ struct ControlsView: View {
                     path.removeLast(path.count)
                 } label: {
                     Image(systemName: "xmark")
+                        .fontWeight(.medium)
+                        .foregroundColor(Color("DarkRedColor"))
                 }
-                .tint(.red)
-                .font(.title2)
+                .tint(Color("LightRedColor").opacity(10))
+                .font(.title3)
                 Text("End")
+                    .font(.footnote)
+                    .padding(.top, 2)
             }
             VStack {
                 Button {
@@ -33,10 +37,14 @@ struct ControlsView: View {
                     isPaused.toggle()
                 } label: {
                     Image(systemName: "play")
+                        .fontWeight(.medium)
+                        .foregroundColor(Color("DarkGreenColor"))
                 }
-                .tint(.yellow)
-                .font(.title2)
+                .tint(Color("LightGreenColor").opacity(10))
+                .font(.title3)
                 Text("Resume")
+                    .font(.footnote)
+                    .padding(.top, 2)
             }
         }
         .navigationBarHidden(true)

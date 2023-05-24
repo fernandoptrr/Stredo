@@ -65,11 +65,11 @@ struct ExerciseView: View {
                         .multilineTextAlignment(.center)
                         .padding()
                 }
-                TimerProggresView(timeRemaining: $timeRemaining, duration: exercise.duration, color: Color("OrangeColor"))
+                TimerProggresView(timeRemaining: $timeRemaining, duration: exercise.duration, color: Color("LightOrangeColor"))
             }
         }
         .foregroundColor(.black)
-        .background(Color("BgColor"))
+        .background(Color("CreamColor"))
     }
 }
 

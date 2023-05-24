@@ -14,30 +14,41 @@ struct StartView: View {
     @Binding  var path: NavigationPath
 
     var body: some View {
-        VStack {
-            Text("Stredo")
-                .font(.title3)
-                .bold()
-            Text("Elevate your productivity and improve your overall well-being")
-                .font(.system(size: 12))
-                .multilineTextAlignment(.center)
-                .padding()
-            Spacer()
-            Button(action: {
-                path.append("sessionView")
-                stretchingManager.startWorkout(workoutType: workoutType)
-            }){
-                Image(systemName: "figure.cooldown")
-            }
-            .padding(.horizontal)
-            .tint(.yellow)
-            .navigationDestination(for: String.self) { view in
-                if view == "sessionView" {
-                    SessionPagingView(path: $path)
+        ZStack {
+            Image("stretch_bg")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 164)
+                .offset(y: 48)
+            VStack {
+                Text("Stredo")
+                    .font(.title3)
+                    .bold()
+                Text("Elevate your productivity and improve your overall well-being")
+                    .font(.system(size: 12))
+                    .multilineTextAlignment(.center)
+                    .padding(.top, -2)
+                Spacer()
+                Button(action: {
+                    path.append("sessionView")
+                    stretchingManager.startWorkout(workoutType: workoutType)
+                }){
+                    Image(systemName: "figure.cooldown")
+                }
+                .padding(.horizontal, 16)
+                .foregroundColor(Color("DarkGreenColor"))
+                .tint(Color("MidGreenColor").opacity(10))
+                .navigationDestination(for: String.self) { view in
+                    if view == "sessionView" {
+                        SessionPagingView(path: $path)
+                    }
                 }
             }
+
         }
         .scenePadding()
+        .foregroundColor(.black)
+        .background(Color("CreamColor"))
         .sheet(isPresented: $stretchingManager.showingSummaryView) {
             SummaryView()
         }

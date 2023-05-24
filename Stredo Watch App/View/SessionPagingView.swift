@@ -45,6 +45,7 @@ struct SessionPagingView: View {
             }
         }
         .animation(.easeInOut, value: showBreak)
+        .background(Color("CreamColor"))
         .navigationBarHidden(true)
         .onChange(of: timeRemaining) { _ in
             if timeRemaining < 0 {
