@@ -57,13 +57,13 @@ extension Exercise {
     static let exercises = [
         Exercise(
             name: ExerciseEnum.neckRotR.rawValue,
-            duration: 8,
+            duration: 10,
             images: ["neckRot_1", "neckRot_2"],
             desc: ExerciseEnum.neckRotR.description
         ),
         Exercise(
             name: ExerciseEnum.neckRotL.rawValue,
-            duration: 8,
+            duration: 10,
             images: ["neckRot_1", "neckRot_3"],
             desc: ExerciseEnum.neckRotL.description
         ),
@@ -105,13 +105,13 @@ extension Exercise {
         ),
         Exercise(
             name: ExerciseEnum.fb.rawValue,
-            duration: 16,
+            duration: 12,
             images: ["fb"],
             desc: ExerciseEnum.fb.description
         ),
         Exercise(
             name: ExerciseEnum.co.rawValue,
-            duration: 16,
+            duration: 12,
             images: ["co"],
             desc: ExerciseEnum.co.description
         ),

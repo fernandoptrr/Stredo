@@ -12,13 +12,13 @@ struct BreakIntervalView: View {
     @EnvironmentObject var stretchingManager: StretchingManager
     @State private var timeRemaining: TimeInterval
     @Binding var showBreak: Bool
-    let message: String
+    let exercise: Exercise
     private let duration: TimeInterval = 5
 
-    init(showBreak: Binding<Bool>, message: String) {
+    init(showBreak: Binding<Bool>, exercise: Exercise) {
         self._timeRemaining = State(initialValue: duration)
         self._showBreak = showBreak
-        self.message = message
+        self.exercise = exercise
     }
 
     var body: some View {
@@ -29,21 +29,18 @@ struct BreakIntervalView: View {
         ) { context in
             ZStack {
                 VStack {
+                    ExerciseImageView(images: exercise.images, showBackground: false)
+                        .padding()
                     Spacer()
                     HStack {
+                        Text("Next in")
                         CountdownView(
                             date: context.date,
                             timeRemaining: $timeRemaining)
-                        .font(FontProvider.custom(.nunito, size: 48))
-                        .padding(.horizontal)
-                        Text("s")
-                            .font(FontProvider.custom(.nunito, size: .title2, style: .title2))
-                            .offset(x: -4, y: 6)
+                        .fontWeight(.medium)
                     }
-                    Spacer()
-                    Text("Next")
-                        .font(FontProvider.custom(.nunito, size: .caption, style: .caption))
-                    Text(message)
+                    .font(FontProvider.custom(.nunito, size: .caption, style: .caption))
+                    Text(exercise.name)
                         .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
                         .fontWeight(.semibold)
                         .lineSpacing(2)
@@ -70,7 +67,7 @@ struct BreakIntervalView: View {
 
 struct BreakIntervalView_Previews: PreviewProvider {
     static var previews: some View {
-        BreakIntervalView(showBreak: .constant(true), message: "Sittingleft neck Stretch")
+        BreakIntervalView(showBreak: .constant(true), exercise: .exercises[0])
             .environmentObject(StretchingManager())
     }
 }

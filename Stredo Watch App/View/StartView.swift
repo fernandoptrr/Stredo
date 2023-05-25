@@ -10,7 +10,7 @@ import HealthKit
 
 struct StartView: View {
     @EnvironmentObject var stretchingManager: StretchingManager
-    private let workoutType: HKWorkoutActivityType = .cycling
+    private let workoutType: HKWorkoutActivityType = .other
     @Binding  var path: NavigationPath
 
     var body: some View {
@@ -25,7 +25,7 @@ struct StartView: View {
                     .font(FontProvider.custom(.nunito, size: .title3, style: .title3))
                     .fontWeight(.bold)
                 Text("Elevate your productivity and improve your overall well-being")
-                    .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
+                    .font(FontProvider.custom(.nunito, size: .subheadline, style: .subheadline))
                     .multilineTextAlignment(.center)
                     .padding(.top, -1)
                     .padding(.horizontal)

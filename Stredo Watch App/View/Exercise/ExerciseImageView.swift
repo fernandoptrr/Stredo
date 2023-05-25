@@ -10,13 +10,16 @@ import SwiftUI
 struct ExerciseImageView: View {
     let images: [String]
     @State private var index = 0
+    var showBackground: Bool = true
 
     var body: some View {
         ZStack {
-            Image("stretch_bg")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 110)
+            if showBackground {
+                Image("stretch_bg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 110)
+            }
             Image(images.count > 1 ? images[index] : images[0])
                 .resizable()
                 .aspectRatio(contentMode: .fit)

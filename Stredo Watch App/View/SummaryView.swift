@@ -20,9 +20,10 @@ struct SummaryView: View {
         return formatter
     }()
 
-    func formattedStandTime(standTime: Double) -> String {
-        let minutes = Int(standTime) / 60
-        let seconds = Int(standTime) % 60
+    private func formatStandTime(_ time: TimeInterval) -> String {
+        let minutes = Int(time / 60)
+        let seconds = Int(time.truncatingRemainder(dividingBy: 60))
+
         return String(format: "%02d:%02d", minutes, seconds)
     }
 
@@ -48,7 +49,7 @@ struct SummaryView: View {
                                                                 usage: .workout,
                                                                 numberFormatStyle: .number.precision(.fractionLength(0)))))
                     .foregroundStyle(.green)
-                    SummaryMetricView(title: "Stand Time", value: formattedStandTime(standTime: stretchingManager.standTime))
+                    SummaryMetricView(title: "Stand Time", value: formatStandTime(stretchingManager.standTime))
                     .foregroundStyle(.pink)
                     Text("Activity Rings")
                         .font(FontProvider.custom(.nunito, size: .title2, style: .title2))

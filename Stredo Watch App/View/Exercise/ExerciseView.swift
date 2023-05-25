@@ -31,7 +31,7 @@ struct ExerciseView: View {
                         .padding(1)
                     Spacer()
                     Text(exercise.desc)
-                        .font(FontProvider.custom(.nunito, size: .subheadline, style: .subheadline))
+                        .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 16)

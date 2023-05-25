@@ -104,7 +104,9 @@ class StretchingManager: NSObject, ObservableObject {
     @Published var averageHeartRate: Double = 0
     @Published var heartRate: Double = 0
     @Published var activeEnergy: Double = 0
-    @Published var standTime: Double = 0
+//    @Published var standTime: Double = 0
+    @Published var standTime: TimeInterval = 0
+
     @Published var workout: HKWorkout?
 
     func updateForStatistics(_ statistics: HKStatistics?) {
@@ -120,8 +122,7 @@ class StretchingManager: NSObject, ObservableObject {
                 let energyUnit = HKUnit.kilocalorie()
                 self.activeEnergy = statistics.sumQuantity()?.doubleValue(for: energyUnit) ?? 0
             case HKQuantityType.quantityType(forIdentifier: .appleStandTime):
-                let secondUnit = HKUnit.second()
-                self.standTime = statistics.mostRecentQuantity()?.doubleValue(for: secondUnit) ?? 0
+                self.standTime = statistics.sumQuantity()?.doubleValue(for: .second()) ?? 0
             default:
                 return
             }

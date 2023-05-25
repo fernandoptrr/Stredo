@@ -37,7 +37,7 @@ struct SessionPagingView: View {
     var body: some View {
         ZStack {
             if showBreak {
-                BreakIntervalView(showBreak: $showBreak, message: exercises[index + 1].name)
+                BreakIntervalView(showBreak: $showBreak, exercise: exercises[index + 1])
                     .transition(.slide)
             } else {
                 ExerciseView(index: $index, timeRemaining: $timeRemaining)
