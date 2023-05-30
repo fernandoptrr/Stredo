@@ -31,13 +31,12 @@ struct ExerciseView: View {
                         .padding(1)
                     Spacer()
                     Text(exercise.desc)
-                        .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
+                        .font(FontProvider.custom(.nunito, size: .callout, style: .callout))
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 16)
                         .offset(y: 10)
                 }
-                .foregroundColor(Color("DarkGreenColor"))
                 TimerProggresView(timeRemaining: $timeRemaining, duration: exercise.duration, color: Color("LightOrangeColor"))
             }
         }

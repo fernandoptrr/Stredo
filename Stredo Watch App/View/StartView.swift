@@ -25,7 +25,7 @@ struct StartView: View {
                     .font(FontProvider.custom(.nunito, size: .title3, style: .title3))
                     .fontWeight(.bold)
                 Text("Elevate your productivity and improve your overall well-being")
-                    .font(FontProvider.custom(.nunito, size: .subheadline, style: .subheadline))
+                    .font(FontProvider.custom(.nunito, size: .footnote, style: .footnote))
                     .multilineTextAlignment(.center)
                     .padding(.top, -1)
                     .padding(.horizontal)
